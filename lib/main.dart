@@ -2,6 +2,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import './view/homepage_listview.dart';
 import './view/drawer_demo.dart';
+import './view/bottom_navitaionbar_demo.dart';
 
 void main() {
   runApp(App());  
@@ -61,18 +62,17 @@ class Home extends StatelessWidget {
           ),
         
         ),
-
-
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.local_activity, size: 200.0, color: Colors.black12),
+            
+            HomeListView(),
             Icon(Icons.local_activity, size: 200.0, color: Colors.black12),
             Icon(Icons.local_activity, size: 200.0, color: Colors.black12),
             Icon(Icons.local_activity, size: 200.0, color: Colors.black12),
           ],
         ),
-        drawer: HomepageDrawer()
-      
+        drawer: HomepageDrawer(),
+        bottomNavigationBar: BottomNavigationBarDemo(),
       ),
 
     );
