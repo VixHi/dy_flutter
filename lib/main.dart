@@ -32,12 +32,20 @@ class Home extends StatelessWidget {
 
           Text(
             posts[index].title,
-            style: Theme.of(context).textTheme.subtitle1,
+            style: TextStyle(
+              fontSize: 40.0,
+              color: Colors.blueGrey,
+              decoration: TextDecoration.underline,
+              // letterSpacing: 30.0,
+              // wordSpacing: 30.0,
+            ),
+           
           ),
 
           Text(
             posts[index].author,
-            style: Theme.of(context).textTheme.subtitle1,
+            // style: Theme.of(context).textTheme.subtitle1,
+            textDirection: TextDirection.rtl,
           ),
 
           SizedBox(height: 16.0),
@@ -62,7 +70,7 @@ class Home extends StatelessWidget {
       );
   }
 }
-
+/*
 class Hello extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -83,3 +91,4 @@ class Hello extends StatelessWidget {
   }
 }
 
+*/
