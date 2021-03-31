@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../lib/model/post.dart';
+import '../model/post.dart';
 
 class HomeListView extends StatelessWidget {
 

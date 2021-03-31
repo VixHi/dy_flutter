@@ -1,6 +1,6 @@
 import 'dart:ffi';
 import 'package:flutter/material.dart';
-import '';
+import './view/homepage_listview.dart';
 
 void main() {
   runApp(App());  
@@ -30,7 +30,7 @@ class Home extends StatelessWidget {
           title: Text('homepage'),
         ),
 
-        body: 
+        body: HomeListView(),
       );
   }
 }
