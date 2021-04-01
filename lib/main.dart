@@ -6,7 +6,7 @@ import './view/bottom_navitaionbar_demo.dart';
 import './view/dy_basic_demo.dart';
 import './view/dy_layout_demo.dart';
 import './view/dy_view_demo.dart';
-
+import './view/dy_sliver_demo.dart';
 
 void main() {
   runApp(App());  
@@ -18,7 +18,8 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: Home(),
+      home: DYSliverDemo(),
       theme: ThemeData(
         primaryColor: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.4),
