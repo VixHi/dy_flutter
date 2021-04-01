@@ -5,6 +5,8 @@ import './view/drawer_demo.dart';
 import './view/bottom_navitaionbar_demo.dart';
 import './view/dy_basic_demo.dart';
 import './view/dy_layout_demo.dart';
+import './view/dy_view_demo.dart';
+
 
 void main() {
   runApp(App());  
@@ -68,7 +70,7 @@ class Home extends StatelessWidget {
           children: <Widget>[
             
             HomeListView(),
-            DYRichTextDemo(),
+            DYViewDemo(),
             DYBasicDemo(),
             DYLayoutDemo(),
           ],
