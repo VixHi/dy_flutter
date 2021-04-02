@@ -9,9 +9,11 @@ import './view/dy_view_demo.dart';
 import './view/dy_sliver_demo.dart';
 // import './view/dy_navigator_demo.dart' as DYNavitator;
 import './view/dy_navigator_demo.dart';
+import './view/dy_form_demo.dart';
+
 void main() {
-  runApp(App());  
-} 
+  runApp(App());
+}
 
 class App extends StatelessWidget {
   @override
@@ -19,20 +21,20 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
-      // home: DYSliverDemo(),
- 
+      // home: Home(),
+      home: DYFormDemo(),
       // home: DYNavitatorDemo(),
-      // initialRoute: '/',
+      initialRoute: '/form',
       routes: {
-        // '/' : (context) => DYNavitatorDemo(),
-        '/about': (context) => DYPage(title: 'About'),
-        // '/push_show': (context) => DYPage(title: 'About'),
+        // '/' : (context) => Home(),
+        // '/about': (context) => DYPage(title: 'About'),
+        '/form': (context) => DYFormDemo(),
       },
       theme: ThemeData(
         primaryColor: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.4),
         splashColor: Colors.white70,
+        accentColor: Colors.blue,
       ),
     );
   }
@@ -57,7 +59,7 @@ class Home extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.search),
               tooltip: 'Navigation',
-              onPressed: ()=> debugPrint('right bar clicked'),
+              onPressed: () => debugPrint('right bar clicked'),
             ),
           ],
 
@@ -74,11 +76,9 @@ class Home extends StatelessWidget {
               Tab(icon: Icon(Icons.local_activity)),
             ],
           ),
-        
         ),
         body: TabBarView(
           children: <Widget>[
-            
             HomeListView(),
             DYViewDemo(),
             DYBasicDemo(),
@@ -88,9 +88,6 @@ class Home extends StatelessWidget {
         drawer: HomepageDrawer(),
         bottomNavigationBar: BottomNavigationBarDemo(),
       ),
-
     );
   }
 }
-
-
