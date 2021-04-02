@@ -7,7 +7,8 @@ import './view/dy_basic_demo.dart';
 import './view/dy_layout_demo.dart';
 import './view/dy_view_demo.dart';
 import './view/dy_sliver_demo.dart';
-
+// import './view/dy_navigator_demo.dart' as DYNavitator;
+import './view/dy_navigator_demo.dart';
 void main() {
   runApp(App());  
 } 
@@ -18,8 +19,16 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: Home(),
-      home: DYSliverDemo(),
+      home: Home(),
+      // home: DYSliverDemo(),
+ 
+      // home: DYNavitatorDemo(),
+      // initialRoute: '/',
+      routes: {
+        // '/' : (context) => DYNavitatorDemo(),
+        '/about': (context) => DYPage(title: 'About'),
+        // '/push_show': (context) => DYPage(title: 'About'),
+      },
       theme: ThemeData(
         primaryColor: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.4),
