@@ -10,6 +10,8 @@ import './view/dy_sliver_demo.dart';
 // import './view/dy_navigator_demo.dart' as DYNavitator;
 import './view/dy_navigator_demo.dart';
 import './view/dy_form_demo.dart';
+import './view/dy_materal_components.dart';
+import './view/dy_popup_menu.dart';
 
 void main() {
   runApp(App());
@@ -20,22 +22,28 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // home: Home(),
-      home: DYFormDemo(),
-      // home: DYNavitatorDemo(),
-      initialRoute: '/form',
-      routes: {
-        // '/' : (context) => Home(),
-        // '/about': (context) => DYPage(title: 'About'),
-        '/form': (context) => DYFormDemo(),
-      },
+
       theme: ThemeData(
         primaryColor: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.4),
         splashColor: Colors.white70,
         accentColor: Colors.blue,
       ),
+
+
+      debugShowCheckedModeBanner: false,
+      // home: Home(),
+      // home: DYFormDemo(),
+      // home: DYNavitatorDemo(),
+      initialRoute: '/pop',
+      routes: {
+        // '/' : (context) => Home(),
+        // '/about': (context) => DYPage(title: 'About'),
+        // '/form': (context) => DYFormDemo(),
+        // '/dcm': (context) => DYMateralComponents(),
+        '/pop': (context) => DYMateralPopupMenuDemo(),
+      },
+
     );
   }
 }
