@@ -62,21 +62,28 @@ class _DYRegisterFormState extends State<DYRegisterForm> {
           TextFormField(
             decoration: InputDecoration(
               labelText: 'UserName',
+              // helperText: '',
             ),
             onSaved: (value) {
               userName = value;
             },
             validator: _userNameValidate,
+            // autovalidate: true,
+            autovalidateMode: AutovalidateMode.disabled,
           ),
           TextFormField(
             obscureText: true,
             decoration: InputDecoration(
               labelText: 'Password',
+              // helperText: '',
             ),
             onSaved: (value) {
               password = value;
             },
             validator: _passwordValidate,
+            // autovalidate: true,
+            // 第一次失败后开始验证
+            autovalidateMode: AutovalidateMode.disabled,
 
           ),
 
