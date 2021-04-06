@@ -35,13 +35,13 @@ class App extends StatelessWidget {
       // home: Home(),
       // home: DYFormDemo(),
       // home: DYNavitatorDemo(),
-      initialRoute: '/pop',
+      initialRoute: '/dcm',
       routes: {
         // '/' : (context) => Home(),
         // '/about': (context) => DYPage(title: 'About'),
         // '/form': (context) => DYFormDemo(),
-        // '/dcm': (context) => DYMateralComponents(),
-        '/pop': (context) => DYMateralPopupMenuDemo(),
+        '/dcm': (context) => DYMateralComponents(),
+        // '/pop': (context) => DYMateralPopupMenuDemo(),
       },
 
     );

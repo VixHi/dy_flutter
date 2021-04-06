@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import '../view/dy_popup_menu.dart';
+import '../view/dy_form_demo.dart';
+import '../view/dy_checkbox_demo.dart';
+import '../view/dy_redio_demo.dart';
+import '../view/dy_switch_demo.dart';
+import '../view/dy_slider_demo.dart';
 
 class DYMateralComponents extends StatelessWidget {
   @override
@@ -10,8 +16,14 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'Slider', page: DYSliderDemo()),
+          DYListItem(title: 'Switch', page: DYSwitchDemo()),
+          DYListItem(title: 'Radio', page: DYRedioDemo()),
+          DYListItem(title: 'Checkbox', page: DYCheckboxDemo()),
+          DYListItem(title: 'FormDemo', page: DYFormDemo()),
           DYListItem(title: 'ButtonDemo', page: DYButtonDemo()),
-          DYListItem(title: 'DYListDemo', page: DYFloatingActionButtonDemo())
+          DYListItem(title: 'DYListDemo', page: DYFloatingActionButtonDemo()),
+          DYListItem(title: 'DYPopupmenuDemo',page: DYMateralPopupMenuDemo()),
         ],
       ),
     );
