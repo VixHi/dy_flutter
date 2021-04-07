@@ -5,6 +5,7 @@ import '../view/dy_checkbox_demo.dart';
 import '../view/dy_redio_demo.dart';
 import '../view/dy_switch_demo.dart';
 import '../view/dy_slider_demo.dart';
+import '../view/dy_datetime_demo.dart';
 
 class DYMateralComponents extends StatelessWidget {
   @override
@@ -16,6 +17,7 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'Time', page: DYDateTimeDemo()),
           DYListItem(title: 'Slider', page: DYSliderDemo()),
           DYListItem(title: 'Switch', page: DYSwitchDemo()),
           DYListItem(title: 'Radio', page: DYRedioDemo()),
