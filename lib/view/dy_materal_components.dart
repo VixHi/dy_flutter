@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld_flutter/view/dy_alert_dialog_demo.dart';
+import 'package:helloworld_flutter/view/dy_bottom_sheet_demo.dart';
+import 'package:helloworld_flutter/view/dy_expansion_panel_demo.dart';
+import 'package:helloworld_flutter/view/dy_simple_dialog_demo.dart';
+import 'package:helloworld_flutter/view/dy_snackBar_demo.dart';
 import '../view/dy_popup_menu.dart';
 import '../view/dy_form_demo.dart';
 import '../view/dy_checkbox_demo.dart';
@@ -6,6 +11,8 @@ import '../view/dy_redio_demo.dart';
 import '../view/dy_switch_demo.dart';
 import '../view/dy_slider_demo.dart';
 import '../view/dy_datetime_demo.dart';
+import '../view/dy_simple_dialog_demo.dart';
+import '../view/dy_bottom_sheet_demo.dart';
 
 class DYMateralComponents extends StatelessWidget {
   @override
@@ -17,6 +24,11 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'ExpansionPanelDemo', page: DYExpansionPanelDemo()),
+          DYListItem(title: 'SnackBar', page: DYSnackBarDemo()),
+          DYListItem(title: 'BottomSheet', page: DYBottomSheetDemo()),
+          DYListItem(title: 'AlertDialog', page: DYAlertDialogDemo()),
+          DYListItem(title: 'SimpleDialog', page: DYSimpleDialogDemo()),
           DYListItem(title: 'Time', page: DYDateTimeDemo()),
           DYListItem(title: 'Slider', page: DYSliderDemo()),
           DYListItem(title: 'Switch', page: DYSwitchDemo()),
