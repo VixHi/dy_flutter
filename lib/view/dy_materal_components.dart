@@ -13,6 +13,7 @@ import '../view/dy_slider_demo.dart';
 import '../view/dy_datetime_demo.dart';
 import '../view/dy_simple_dialog_demo.dart';
 import '../view/dy_bottom_sheet_demo.dart';
+import '../view/dy_chip_demo.dart';
 
 class DYMateralComponents extends StatelessWidget {
   @override
@@ -24,6 +25,7 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'DYChipDemo', page: DYChipDemo()),
           DYListItem(title: 'ExpansionPanelDemo', page: DYExpansionPanelDemo()),
           DYListItem(title: 'SnackBar', page: DYSnackBarDemo()),
           DYListItem(title: 'BottomSheet', page: DYBottomSheetDemo()),
