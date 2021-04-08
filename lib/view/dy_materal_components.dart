@@ -18,6 +18,7 @@ import '../view/dy_data_table_demo.dart';
 import '../view/dy_paginated_table_demo.dart';
 import '../view/dy_card_demo.dart';
 import '../view/dy_stepper_demo.dart';
+import '../view/state/dy_scpoed_model_demo.dart';
 
 class DYMateralComponents extends StatelessWidget {
   @override
@@ -29,6 +30,7 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'DYScopedModel', page: DYScopedModelDemo()),
           DYListItem(title: 'DYStepper', page: DYStepperDemo()),
           DYListItem(title: 'DYCardDemo', page: DYCardDemo()),
           DYListItem(title: 'DYDataTableDemo', page: DYPaginatedDemo()),

@@ -1,5 +1,5 @@
-import 'dart:ffi';
 import 'package:flutter/material.dart';
+import 'package:helloworld_flutter/view/state/dy_state_management_demo.dart';
 import './view/homepage_listview.dart';
 import './view/drawer_demo.dart';
 import './view/bottom_navitaionbar_demo.dart';
@@ -42,6 +42,7 @@ class App extends StatelessWidget {
         // '/form': (context) => DYFormDemo(),
         '/dcm': (context) => DYMateralComponents(),
         // '/pop': (context) => DYMateralPopupMenuDemo(),
+        '/state-management': (context) => DYStateManagementDemo(),
       },
 
     );
