@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld_flutter/view/bloc/dy_bloc_demo.dart';
 import 'package:helloworld_flutter/view/dy_alert_dialog_demo.dart';
 import 'package:helloworld_flutter/view/dy_bottom_sheet_demo.dart';
 import 'package:helloworld_flutter/view/dy_expansion_panel_demo.dart';
@@ -32,6 +33,7 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'DYBlocDemo', page: DYBlocDemo()),
           DYListItem(title: 'DYRxdartDemo', page: DYRxdartDemo()),
           DYListItem(title: 'DYStreamDemo', page: DYStreamDemo()),
           DYListItem(title: 'DYScopedModel', page: DYScopedModelDemo()),
