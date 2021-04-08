@@ -4,6 +4,7 @@ import 'package:helloworld_flutter/view/dy_bottom_sheet_demo.dart';
 import 'package:helloworld_flutter/view/dy_expansion_panel_demo.dart';
 import 'package:helloworld_flutter/view/dy_simple_dialog_demo.dart';
 import 'package:helloworld_flutter/view/dy_snackBar_demo.dart';
+import 'package:helloworld_flutter/view/stream/dy_stream_demo.dart';
 import '../view/dy_popup_menu.dart';
 import '../view/dy_form_demo.dart';
 import '../view/dy_checkbox_demo.dart';
@@ -30,6 +31,7 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'DYStreamDemo', page: DYStreamDemo()),
           DYListItem(title: 'DYScopedModel', page: DYScopedModelDemo()),
           DYListItem(title: 'DYStepper', page: DYStepperDemo()),
           DYListItem(title: 'DYCardDemo', page: DYCardDemo()),
