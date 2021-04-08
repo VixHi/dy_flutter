@@ -27,7 +27,7 @@ dependencies:
   scoped_model: ^1.1.0
   rxdart: ^0.26.0
   bloc: ^7.0.0
-
+  http: ^0.13.1
 
 
   

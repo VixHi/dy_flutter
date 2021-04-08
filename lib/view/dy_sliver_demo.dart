@@ -28,7 +28,7 @@ class DYScaffooldDemo extends StatelessWidget {
                  style: TextStyle(fontSize: 30, )
               ),
               background: Image.network(
-                posts[0].imageUlr,
+                posts[0].imageUrl,
                 fit: BoxFit.cover,  
               ),
             ),
@@ -62,7 +62,7 @@ class DYSliverListDemo extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 16/9,
                     child: Image.network(
-                      posts[index].imageUlr,
+                      posts[index].imageUrl,
                       fit:BoxFit.cover,
                     ),
                   ),
@@ -102,7 +102,7 @@ class DYSliverGridDemo extends StatelessWidget {
         (BuildContext context, int index) {
           return Container(
             child: Image.network(
-              posts[index].imageUlr,
+              posts[index].imageUrl,
               fit: BoxFit.cover,
             ),
           );

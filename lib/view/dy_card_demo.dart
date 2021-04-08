@@ -29,19 +29,19 @@ class _DYCardDemoState extends State<DYCardDemo> {
                           topRight: Radius.circular(4),
                         ),
                         child: Image.network(
-                          post.imageUlr,
+                          post.imageUrl,
                           fit: BoxFit.cover,
                         ),
                       )),
                   ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: NetworkImage(post.imageUlr),
+                      backgroundImage: NetworkImage(post.imageUrl),
                     ),
                     title: Text(post.title),
                     subtitle: Text(post.author),
                   ),
                   Container(
-                    child: Text(post.desc,
+                    child: Text(post.description,
                         maxLines: 3, overflow: TextOverflow.ellipsis),
                     padding: EdgeInsets.all(16),
                   ),

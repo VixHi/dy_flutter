@@ -17,7 +17,7 @@ class PostDataSource extends DataTableSource {
           Text(post.author),
         ),
         DataCell(
-          Image.network(post.imageUlr),
+          Image.network(post.imageUrl),
         ),
       ],
     );

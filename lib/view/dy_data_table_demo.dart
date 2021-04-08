@@ -68,7 +68,7 @@ class _DYDataTableDemoState extends State<DYDataTableDemo> {
                       Text(post.author),
                     ),
                     DataCell(
-                      Image.network(post.imageUlr),
+                      Image.network(post.imageUrl),
                     ),
                   ],
                 );

@@ -13,7 +13,7 @@ class HomeListView extends StatelessWidget {
             children: <Widget>[
               AspectRatio(
                 aspectRatio: 16/9,
-                child: Image.network(posts[index].imageUlr, fit: BoxFit.cover,),
+                child: Image.network(posts[index].imageUrl, fit: BoxFit.cover,),
               ),
               SizedBox(height: 16.0),
               Text(

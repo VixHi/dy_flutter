@@ -16,7 +16,7 @@ class DYGridViewBuilderDemo extends StatelessWidget {
   Widget _dyGridItemBuilder(BuildContext context, int index) {
     return Container(
       child: Image.network(
-        posts[index].imageUlr,
+        posts[index].imageUrl,
         fit: BoxFit.cover,
       ),
 
@@ -122,7 +122,7 @@ class DYPageViewBuilderDemo extends StatelessWidget {
       children: [
         SizedBox.expand( 
           child: Image.network(
-            posts[index].imageUlr,
+            posts[index].imageUrl,
             fit: BoxFit.cover,
           ),
         ),

@@ -20,7 +20,7 @@ class DYPushShow extends StatelessWidget {
           AspectRatio(
             aspectRatio: 16/9,
             child: Image.network(
-              '${post.imageUlr}',
+              '${post.imageUrl}',
               fit: BoxFit.cover,
             ),
           ),
@@ -33,7 +33,7 @@ class DYPushShow extends StatelessWidget {
               children: [
                 Text('${post.title}', style: Theme.of(context).textTheme.headline5),
                 Text('${post.author}', style: Theme.of(context).textTheme.headline5),
-                Text('${post.desc}', style: Theme.of(context).textTheme.headline6),
+                Text('${post.description}', style: Theme.of(context).textTheme.headline6),
               ],
             ),
           ),
