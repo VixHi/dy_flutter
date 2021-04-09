@@ -25,8 +25,7 @@ class _DYHttpHomeState extends State<DYHttpHome> {
   @override
   void initState() {
     super.initState();
-    fetchData()
-      .then((value) => print(value));
+    fetchData().then((value) => print(value));
 
     // final jsonDemo = {'title': 'hello', 'description': 'nice to meet you'};
 
@@ -49,10 +48,10 @@ class _DYHttpHomeState extends State<DYHttpHome> {
     if (response.statusCode == 200) {
       final responseBody = json.decode(response.body);
       List<UserModel> dataSource = responseBody['posts']
-        .map<UserModel>((model) => UserModel.fromJson(model))
-        .toList();
-        return dataSource;
-    }else {
+          .map<UserModel>((model) => UserModel.fromJson(model))
+          .toList();
+      return dataSource;
+    } else {
       throw Exception('Failed to fetch posts');
     }
   }
@@ -60,26 +59,24 @@ class _DYHttpHomeState extends State<DYHttpHome> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: fetchData(),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(
-            child: Text('loading...'),
-          );
-        }
-        return ListView(
-          children: snapshot.data.map<Widget>((model) {
-            return ListTile(
-              title: Text(model.title),
-              subtitle: Text(model.author),
-              leading: CircleAvatar(
-                backgroundImage: NetworkImage(model.imageUrl)
-              ),
+        future: fetchData(),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: Text('loading...'),
             );
-          }).toList(),
-        );
-      }
-    );
+          }
+          return ListView(
+            children: snapshot.data.map<Widget>((model) {
+              return ListTile(
+                title: Text(model.title),
+                subtitle: Text(model.author),
+                leading:
+                    CircleAvatar(backgroundImage: NetworkImage(model.imageUrl)),
+              );
+            }).toList(),
+          );
+        });
   }
 }
 
@@ -94,18 +91,17 @@ class UserModel {
       {this.id, this.title, this.description, this.imageUrl, this.author});
 
   UserModel.fromJson(Map json)
-      : title       = json['title'],
+      : title = json['title'],
         description = json['description'],
-        id          = json['id'],
-        imageUrl    = json['imageUrl'],
-        author      = json['author'];
-
+        id = json['id'],
+        imageUrl = json['imageUrl'],
+        author = json['author'];
 
   Map toJson() => {
-    'title' : title,
-    'id'    : id,
-    'description' : description,
-    'imageUrl' : imageUrl,
-    'author' : author,
-  };
+        'title': title,
+        'id': id,
+        'description': description,
+        'imageUrl': imageUrl,
+        'author': author,
+      };
 }

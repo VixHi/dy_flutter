@@ -22,6 +22,7 @@ import '../view/dy_paginated_table_demo.dart';
 import '../view/dy_card_demo.dart';
 import '../view/dy_stepper_demo.dart';
 import '../view/state/dy_scpoed_model_demo.dart';
+import 'animaition/dy_animation_demo.dart';
 import 'http/dy_http_demo.dart';
 
 class DYMateralComponents extends StatelessWidget {
@@ -34,6 +35,7 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'DYAnimationDemo', page: DYAnimationDemo()),
           DYListItem(title: 'DYHttpDemo', page: DYHttpDemo()),
           DYListItem(title: 'DYBlocDemo', page: DYBlocDemo()),
           DYListItem(title: 'DYRxdartDemo', page: DYRxdartDemo()),
