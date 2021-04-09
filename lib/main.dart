@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:helloworld_flutter/view/i18n/dy_localization.dart';
 import 'package:helloworld_flutter/view/state/dy_state_management_demo.dart';
 import './view/homepage_listview.dart';
 import './view/drawer_demo.dart';
@@ -20,8 +22,21 @@ void main() {
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
+      locale: Locale('zh', 'CN'),
+      // localeResolutionCallback: (Locale locale, Iterable<Locale> supportedLocales){
+      //   return Locale('en', 'US');
+      // },
+
+      localizationsDelegates: [
+        DYLocalizationsConfigDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
 
       theme: ThemeData(
         primaryColor: Colors.yellow,
