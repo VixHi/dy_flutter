@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld_flutter/view/bloc/dy_bloc_demo.dart';
 import 'package:helloworld_flutter/view/dy_alert_dialog_demo.dart';
+import 'package:helloworld_flutter/view/dy_basic_demo.dart';
 import 'package:helloworld_flutter/view/dy_bottom_sheet_demo.dart';
 import 'package:helloworld_flutter/view/dy_expansion_panel_demo.dart';
 import 'package:helloworld_flutter/view/dy_simple_dialog_demo.dart';
 import 'package:helloworld_flutter/view/dy_snackBar_demo.dart';
 import 'package:helloworld_flutter/view/rxdart/dy_rxdart_demo.dart';
 import 'package:helloworld_flutter/view/stream/dy_stream_demo.dart';
+import 'package:helloworld_flutter/view/test/dy_unit_test_demo.dart';
 import '../view/dy_popup_menu.dart';
 import '../view/dy_form_demo.dart';
 import '../view/dy_checkbox_demo.dart';
@@ -36,6 +38,7 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'DYTestDemo', page: DYTestDemo()),
           DYListItem(title: 'DYI18nDemo', page: DYI18nDemo()),
           DYListItem(title: 'DYAnimationDemo', page: DYAnimationDemo()),
           DYListItem(title: 'DYHttpDemo', page: DYHttpDemo()),
