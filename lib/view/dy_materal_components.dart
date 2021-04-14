@@ -6,6 +6,7 @@ import 'package:helloworld_flutter/view/dy_bottom_sheet_demo.dart';
 import 'package:helloworld_flutter/view/dy_expansion_panel_demo.dart';
 import 'package:helloworld_flutter/view/dy_simple_dialog_demo.dart';
 import 'package:helloworld_flutter/view/dy_snackBar_demo.dart';
+import 'package:helloworld_flutter/view/image/dy_image_demo.dart';
 import 'package:helloworld_flutter/view/rxdart/dy_rxdart_demo.dart';
 import 'package:helloworld_flutter/view/stream/dy_stream_demo.dart';
 import 'package:helloworld_flutter/view/test/dy_unit_test_demo.dart';
@@ -27,6 +28,7 @@ import '../view/state/dy_scpoed_model_demo.dart';
 import 'animaition/dy_animation_demo.dart';
 import 'http/dy_http_demo.dart';
 import 'i18n/dy_i18n_demo.dart';
+import '../view/image/dy_image_demo.dart';
 
 class DYMateralComponents extends StatelessWidget {
   @override
@@ -38,8 +40,8 @@ class DYMateralComponents extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          DYListItem(title: 'DYImageDemo', page: DYImageDemo()),
           DYListItem(title: 'DYTestDemo', page: DYTestDemo()),
-          DYListItem(title: 'DYI18nDemo', page: DYI18nDemo()),
           DYListItem(title: 'DYAnimationDemo', page: DYAnimationDemo()),
           DYListItem(title: 'DYHttpDemo', page: DYHttpDemo()),
           DYListItem(title: 'DYBlocDemo', page: DYBlocDemo()),

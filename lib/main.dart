@@ -52,7 +52,7 @@ class App extends StatelessWidget {
       // home: DYNavitatorDemo(),
       initialRoute: '/dcm',
       routes: {
-        // '/' : (context) => Home(),
+        '/' : (context) => Home(),
         // '/about': (context) => DYPage(title: 'About'),
         // '/form': (context) => DYFormDemo(),
         '/dcm': (context) => DYMateralComponents(),

@@ -28,6 +28,7 @@ dependencies:
   rxdart: ^0.26.0
   bloc: ^7.0.0
   http: ^0.13.1
+  image_picker: ^0.7.4
   flutter_localizations:
     sdk: flutter
   
